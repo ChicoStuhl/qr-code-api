@@ -1,8 +1,13 @@
-package com.criabb;
+package com.criabb.rest;
 
 
 import java.io.IOException;
+import java.util.List;
 
+import com.criabb.model.QrCodeGeneratorRequest;
+import com.criabb.model.QrCodeGeneratorResponse;
+import com.criabb.model.qrCodeEntity;
+import com.criabb.service.QrCodeGeneratorService;
 import com.google.zxing.WriterException;
 
 import jakarta.inject.Inject;
@@ -24,6 +29,12 @@ public class QrCodeGeneratorResource {
     @POST
     public QrCodeGeneratorResponse generateQrCode(QrCodeGeneratorRequest qrCodeGeneratorRequest) throws WriterException, IOException {
         return qrCodeGeneratorService.generateQrCode(qrCodeGeneratorRequest);
+    }
+
+    @Path("getQrCode")
+    @POST
+    public List<qrCodeEntity> getAllQrCode(){
+        return qrCodeGeneratorService.getAllQrCode();
     }
 
 

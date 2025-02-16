@@ -7,6 +7,7 @@ release.properties
 .flattened-pom.xml
 
 # Eclipse
+
 .project
 .classpath
 .settings/
@@ -43,3 +44,5 @@ nb-configuration.xml
 /.quarkus/cli/plugins/
 # TLS Certificates
 .certs/
+
+imagens/

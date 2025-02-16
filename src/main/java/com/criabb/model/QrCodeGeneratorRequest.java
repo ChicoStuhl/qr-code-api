@@ -1,4 +1,4 @@
-package com.criabb;
+package com.criabb.model;
 
 public class QrCodeGeneratorRequest {
 
